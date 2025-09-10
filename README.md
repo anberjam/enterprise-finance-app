@@ -32,9 +32,9 @@ This project simulates real enterprise finance systems, featuring **invoice life
 ---
 
 ## 📚 Documentation
-- [Business Rules](docs/business_rules.md)
-- [API Design](docs/api_design.md) _(coming soon)_
-- [ER Diagram](docs/er_diagram.png) _(coming soon)_
+- [Business Rules](documents/business_rules.md)
+- [API Design](documents/api_design.md) _(coming soon)_
+- [ER Diagram](documentss/er_diagram.png) _(coming soon)_
 
 ---
 
