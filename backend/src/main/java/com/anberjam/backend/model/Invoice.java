@@ -1,6 +1,8 @@
 package com.anberjam.backend.model;
 
 import jakarta.persistence.*;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Table(name="invoices")
@@ -11,21 +13,21 @@ public class Invoice {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="vender_id", nullable=false)
-    private Vender vender;
+    @JoinColumn(name="vendor_id", nullable=false)
+    private Vendor vendor;
 
     @Column(nullable=false)
     private BigDecimal totalPrice;
 
-    @Column(nullable=false;)
+    @Column(nullable=false)
     private LocalDate dueDate;
 
     private Boolean paid;
 
     public Invoice() {}
 
-    public Invoice(Vender vender, BigDecimal totalPrice, LocalDate dueDate, Boolean paid) {
-        this.vender = vender;
+    public Invoice(Vendor vendor, BigDecimal totalPrice, LocalDate dueDate, Boolean paid) {
+        this.vendor = vendor;
         this.totalPrice = totalPrice;
         this.dueDate = dueDate;
         this.paid = paid;
@@ -39,12 +41,12 @@ public class Invoice {
         this.id = id;
     }
 
-    public Vender getVender() {
-        return vender;
+    public Vendor getVendor() {
+        return vendor;
     }
 
-    public void setVender(Vender vender) {
-        this.vender = vender;
+    public void setVendor(Vendor vendor) {
+        this.vendor = vendor;
     }
 
     public BigDecimal getTotalPrice() {
